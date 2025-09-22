@@ -1,0 +1,1 @@
+declare module '@inkeep/agents-core';
