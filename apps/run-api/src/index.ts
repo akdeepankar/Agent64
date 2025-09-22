@@ -6,7 +6,7 @@ import { getLogger } from '@inkeep/agents-core';
 const logger = getLogger('execution-api');
 
 
-const inkeep_run_api_port = 3003;
+const inkeep_run_api_port = process.env.PORT ? Number(process.env.PORT) : 3003;
 
 // Create the Hono app
 const app = createExecutionApp({
