@@ -12,8 +12,6 @@ RUN npm install -g pnpm@10.17.0
 
 RUN pnpm install --frozen-lockfile
 
-RUN pnpm build
+EXPOSE 3000 3002 3003
 
-EXPOSE 3003
-
-CMD ["pnpm", "--filter", "run-api-quickstart", "start"]
+CMD ["pnpm", "dev"]

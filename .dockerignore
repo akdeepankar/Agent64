@@ -4,6 +4,7 @@ scripts/node_modules
 .env
 .env.*
 local.db
+
 *.log
 .git
 .gitignore
