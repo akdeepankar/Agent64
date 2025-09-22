@@ -14,4 +14,6 @@ RUN pnpm install --frozen-lockfile
 
 EXPOSE 8080
 
+RUN pnpm --filter run-api-quickstart build
+
 CMD ["pnpm", "--filter", "run-api-quickstart", "start"]
