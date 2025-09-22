@@ -9,14 +9,14 @@
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
     "outDir": "./dist",
-    "rootDir": "./src",
+  "rootDir": "../",
     "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": false
   },
   "include": [
-    "src/**/*",
+    "../manage-api/src/**/*",
     "../shared/**/*"
   ],
   "exclude": [
