@@ -10,6 +10,10 @@ COPY scripts/ ./scripts/
 
 RUN npm install -g pnpm@10.17.0
 
+
+# Set DB_FILE_NAME for setup script
+ENV DB_FILE_NAME=libsql://database-violet-window-vercel-icfg-tbuxyiynqplgcvoedgrddlgd.aws-us-east-1.turso.io
+
 RUN pnpm install --frozen-lockfile
 
 
