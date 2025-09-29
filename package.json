@@ -11,7 +11,7 @@
     "db:push": "drizzle-kit push",
   "build": "turbo run build",
   "start": "pnpm exec inkeep dev"
-  ,"postinstall": "node scripts/setup.js"
+    ,"postinstall": "pnpm db:push && node scripts/setup.js"
   },
   "dependencies": {
     "@inkeep/agents-core": "^0.3.0",
