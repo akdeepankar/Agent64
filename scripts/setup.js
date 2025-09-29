@@ -58,7 +58,7 @@ async function setupProject() {
         console.log('✅ Project created successfully!');
       } catch (error) {
         // If UNIQUE constraint fails, treat as success
-        if (error && error.message && error.message.includes('UNIQUE constraint failed')) {
+        if (error && (error.message?.includes('UNIQUE constraint failed') || error.code === 'SQLITE_CONSTRAINT')) {
           console.log('✅ Project already exists (caught UNIQUE constraint).');
         } else {
           throw error;

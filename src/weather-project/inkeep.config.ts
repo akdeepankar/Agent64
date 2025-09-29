@@ -3,8 +3,8 @@ import { defineConfig } from '@inkeep/agents-cli/config';
   const config = defineConfig({
     tenantId: "default",
     projectId: "weather-project",
-    agentsManageApiUrl: 'http://localhost:3002',
-    agentsRunApiUrl: 'http://localhost:3003',
+    agentsManageApiUrl: 'https://manage-api-quickstart-production.up.railway.app',
+    agentsRunApiUrl: 'https://run-api-quickstart-production.up.railway.app',
     modelSettings: {
   "base": {
     "model": "openai/gpt-5-2025-08-07"
