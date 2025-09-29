@@ -12,6 +12,11 @@ RUN npm install -g pnpm@10.17.0
 
 RUN pnpm install --frozen-lockfile
 
+
+# Build the TypeScript output for all apps
+RUN pnpm run build
+
 EXPOSE 3000 3002 3003
 
-CMD ["pnpm", "dev"]
+# Use pnpm start for production (change path if needed)
+CMD ["pnpm", "start", "--filter", "manage-api-quickstart"]
