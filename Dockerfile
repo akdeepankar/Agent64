@@ -11,8 +11,9 @@ COPY scripts/ ./scripts/
 RUN npm install -g pnpm@10.17.0
 
 
-# Set DB_FILE_NAME for setup script
-ENV DB_FILE_NAME=libsql://database-violet-window-vercel-icfg-tbuxyiynqplgcvoedgrddlgd.aws-us-east-1.turso.io
+
+# Set DB_FILE_NAME for setup script with Turso authToken
+ENV DB_FILE_NAME=libsql://database-violet-window-vercel-icfg-tbuxyiynqplgcvoedgrddlgd.aws-us-east-1.turso.io?authToken=eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3NTkxMjg4NjMsImlkIjoiZDJkYjk2MTgtYWYzZS00MDI2LWExODYtOWY3ZmQ5OWZmNTU5IiwicmlkIjoiYjY3ZGY3OTMtZmU3Yy00ZWEzLThmZDEtOTQ2Y2VhODdmYjExIn0.f7-P0pKBj8dMP2Lmd0jdbeNJYkEG2zfogiUV-KFoGfSAJx06PQDWmcleic75NeeZEk-hRPNlJDYsyAoKvtaYBg
 
 RUN pnpm install --frozen-lockfile
 
