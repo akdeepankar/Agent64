@@ -4,6 +4,6 @@ export default defineConfig({
   schema: 'node_modules/@inkeep/agents-core/dist/db/schema.js',
   dialect: 'sqlite',
   dbCredentials: {
-    url: process.env.DB_FILE_NAME || 'file:./local.db'
+    url: process.env.TURSO_DATABASE_URL || 'file:./local.db'
   },
 });

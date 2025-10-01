@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 // Load environment variables
 dotenv.config();
 
-const dbUrl = process.env.DB_FILE_NAME || 'file:local.db';
+const dbUrl = process.env.TURSO_DATABASE_URL || 'file:local.db';
 const tenantId = 'default';
 const projectId = 'default';
 const projectName = 'default';

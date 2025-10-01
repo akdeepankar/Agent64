@@ -1,4 +1,4 @@
-# Inkeep Agent Framework Template 
+# Inkeep Agent Framework Template
 
 An Inkeep Agent Framework project with multi-service architecture.
 
@@ -8,39 +8,44 @@ This project follows a workspace structure with the following services:
 
 - **Agents Manage API** (Port 3002): Agent configuration and managemen
   - Handles entity management and configuration endpoints.
-- **Agents Run API** (Port 3003): Agent execution and chat processing  
+- **Agents Run API** (Port 3003): Agent execution and chat processing
   - Handles agent communication. You can interact with your agents either over MCP from an MCP client or through our React UI components library
 - **Agents Manage UI** (Port 3000): Web interface available via `inkeep dev`
   - The agent framework visual builder. From the builder you can create, manage and visualize all your graphs.
 
 ## Quick Start
+
 1. **Install the Inkeep CLI:**
+
    ```bash
    pnpm install -g @inkeep/agents-cli
    ```
 
 1. **Start services:**
+
    ```bash
    # Install dependencies
    pnpm install
-   
+
    # Start Agents Manage API and Agents Run API
    pnpm dev
-   
+
    # Start the Dashboard
    inkeep dev
    ```
 
-3. **Deploy your first agent graph:**
+1. **Deploy your first agent graph:**
+
    ```bash
    # Navigate to your project's graph directory
    cd src/<project-name>/
-   
+
    # Push the weather graph to create it
    inkeep push weather.graph.ts
    ```
-  - Follow the prompts to create the project and graph
-  - Click on the "View graph in UI:" link to see the graph in the management dashboard
+
+- Follow the prompts to create the project and graph
+- Click on the "View graph in UI:" link to see the graph in the management dashboard
 
 ## Project Structure
 
@@ -67,7 +72,7 @@ Environment variables are defined in the following places:
 - `apps/manage-api/.env`: Agents Manage API environment variables
 - `apps/run-api/.env`: Agents Run API environment variables
 - `src/<project-name>/.env`: Inkeep CLI environment variables
-- `.env`: Root environment variables 
+- `.env`: Root environment variables
 
 To change the API keys used by your agents modify `apps/run-api/.env`. You are required to define at least one LLM provider key.
 
@@ -76,8 +81,6 @@ To change the API keys used by your agents modify `apps/run-api/.env`. You are r
 ANTHROPIC_API_KEY=your-anthropic-key-here
 OPENAI_API_KEY=your-openai-key-here
 ```
-
-
 
 ### Agent Configuration
 
@@ -92,13 +95,12 @@ Your inkeep configuration is defined in `src/<project-name>/inkeep.config.ts`. T
 - `agentsManageApiUrl`: The Manage API URL
 - `agentsRunApiUrl`: The Run API URL
 
-
 ## Development
 
 ### Updating Your Agents
 
 1. Edit `src/<project-name>/weather.graph.ts`
-2. Push the graph to the platform to update: `inkeep pus weather.graph.ts` 
+2. Push the graph to the platform to update: `inkeep pus weather.graph.ts`
 
 ### API Documentation
 
@@ -117,7 +119,7 @@ Once services are running, view the OpenAPI documentation:
 
 - Ensure you are runnning commands from `cd src/<project-name>`.
 - Validate the `inkeep.config.ts` file has the correct api urls.
-- Validate that the `.env` file in `src/<project-name>` has the correct `DB_FILE_NAME`.
+- Validate that the `.env` file in `src/<project-name>` has the correct `TURSO_DATABASE_URL`.
 
 ### Services won't start
 
@@ -138,6 +140,7 @@ Once services are running, view the OpenAPI documentation:
 This repostory contains a template `Dockerfile`. Follow these steps to build and run the app locally.
 
 ### Prerequisites
+
 - [Install Docker Desktop](https://www.docker.com/)
 
 ### Build locally

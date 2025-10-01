@@ -6,7 +6,7 @@ services:
       - "3002:3002"
       - "3003:3003"
     environment:
-      - DB_FILE_NAME=file:/inkeep-agents/db/local.db
+      - TURSO_DATABASE_URL=file:/inkeep-agents/db/local.db
     env_file:
       - .env
     volumes:
